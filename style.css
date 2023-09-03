@@ -1,0 +1,120 @@
+/* Reset CSS para garantir a consistência entre os navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo de fundo preto */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Estilo do cabeçalho com animação de fade-in */
+h1 {
+  font-size: 36px;
+  color: #00aaff; /* Azul tecnologia */
+  margin: 20px 0;
+  animation: fadeIn 1s ease;
+}
+
+/* Estilo do parágrafo com animação de slide-in */
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1s ease forwards 0.5s;
+}
+
+/* Estilo dos botões com animação de escala e transição de cor */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #075dd6;
+  border-radius: 35px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #00aaff; /* Azul tecnologia ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Estilo do título da página */
+.title {
+  font-size: 24px;
+  color: #00aaff; /* Azul tecnologia */
+  margin-top: 20px;
+  animation: fadeIn 1s ease 1s forwards;
+}
+
+/* Estilo do rodapé */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888; /* Cinza claro */
+  animation: fadeIn 1s ease 2s forwards;
+}
+
+/* Estilo de largura máxima para conteúdo */
+@media screen and (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Estilo para largura de tela muito estreita */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
